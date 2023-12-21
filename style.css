@@ -1,0 +1,25 @@
+
+<style>
+
+#conteudo {
+background: #ff7a7a;
+width: 100%;
+height: 100%;
+position: fixed;
+top: 0;
+left: 0;
+padding: 10px;
+text-align: center;
+font-family: sans-serif;
+}
+
+.btn {
+background: #000000;
+color: #ffffff;
+border: nome;
+padding: 10px;
+width: 80px;
+border-radius: 5px;
+}
+
+</style>
