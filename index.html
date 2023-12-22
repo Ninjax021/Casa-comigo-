@@ -1,68 +1,65 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
   <link rel="stylesheet" href="styles/style.css"/>
   <title>Casa comigo?</title>
+  <link rel="stylesheet" href="estilo.css">
 </head>
-<script src="script.js"></script>
-<link real="stylesheet" href="estilo.css">
+<body style="margin: 0; background: #ff7a7a;">
 
-
-<body>
   <div id="conteudo">
-    <h1>Aceita casar comigo?</h1>
-    <button class="btn" onclick="sim()">Sim</button>
-    <button class="btn" onclick="desvia(this)" onmouseover="desvia(this)">Não</button>
+    <h1 style="font-size: 3.25em; margin-bottom: 20px;">Aceita casar comigo?</h1>
+    <button class="btn" onclick="sim()" style="background: #000000; color: #ffffff; border: none; padding: 18px; width: 150px; font-size: 1.56em; border-radius: 10px; margin: 13px; z-index: 2;">Sim</button>
+    <button class="btn" onclick="desvia(this)" onmouseover="desvia(this)" style="background: #000000; color: #ffffff; border: none; padding: 18px; width: 150px; font-size: 1.56em; border-radius: 10px; margin: 13px; z-index: 2;">Não</button>
+
+    <img src="https://www.megamensagens.com/upload/3648.gif" alt="Imagem" style="position: absolute; z-index: 1; width: 500px; height: auto; top: 50%; left: 50%; transform: translate(-50%, -50%);" />
   </div>
-  <h1>
-    
-  </h1>
+
+  <script src="script.js"></script>
+
+  <style>
+    #conteudo {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+      padding: 10px;
+      text-align: center;
+      font-family: sans-serif;
+    }
+
+    .btn {
+      background: #000000;
+      color: #ffffff;
+      border: none;
+      padding: 18px;
+      width: 150px;
+      font-size: 1.56em;
+      border-radius: 10px;
+      margin: 13px;
+    }
+  </style>
+
+  <script>
+    function sim() {
+      window.location.href = "https://youtu.be/T1RjpZDmYbc?si=E-HfPi23sRvdWEwp";
+    }
+
+    function desvia(t) {
+      var btn = t;
+      btn.style.position = 'absolute';
+      btn.style.bottom = geraPosicao(10, 70); /* Limitado a 70% para evitar sobreposição */
+      btn.style.left = geraPosicao(10, 90);
+      console.log(btn);
+      console.log("opa, desviei...");
+    }
+
+    function geraPosicao(min, max) {
+      return (Math.random() * (max - min) + min) + "%";
+    }
+  </script>
 </body>
-
-<style>
-
-#conteudo {
-  background: #ff7a7a;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding; 10px;
-  text-align: center;
-  font-family: sans-serif;
-
-}
-
-.btn {
-background: #000000;
-color: #ffffff;
-border: nome;
-padding: 10px;
-width: 80px;
-border-radius: 5px;
-}
-</style>
-
-<script>
-function sim(){
-  alert("Você aceitou casar comigo<3")
-}
-function desvia(t){
-  var btn = t;
-  btn.style.position = 'absolute';
-  btn.style.bottom = geraPosicao(10, 90);
-  btn.style.left = geraPosicao(10, 90)
-  console.log(bnt)
-  console.log("opa, desviei...")
- 
-}
-
- function geraPosicao(min, max) {
-   return (Math.random() * (max - min) + min) + "%";
- }
-
-</script>
 </html>
